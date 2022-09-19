@@ -1,4 +1,4 @@
-#include <studio>
+#include <stdio.h>
 /**
  * main - prints the count of multiples
  * multiple of 3 or 5 below 1024

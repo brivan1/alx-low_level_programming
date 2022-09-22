@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strcpy - C function tat copies a string, including the
+ * _strncpy - C function tat copies a string, including the
  * terminating null byte, using atmost an inputted number of bytes.
  * if the length of the source string is less than the maximum byte number,
  * the remainder of the destination string is filled with null bytes
@@ -10,7 +10,7 @@
  * @n: max number of the byte copied
  */
 
-char *_strcpy(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
 

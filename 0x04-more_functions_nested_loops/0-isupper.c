@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _issuper - function that checks for uppercase character
@@ -8,10 +7,11 @@
  */
 int _isupper(int c)
 {
-	if (c >= 'A' && c <= 'Z')
+	char c;
+
+	for (c = 'A'; c =< 'Z'; c++)
 	{
-		return (1);
+		_putchar(c);
 	}
-	else
-		return (0);
+	_putchar('\n')
 }

@@ -17,9 +17,9 @@ int main(void)
 
 	char five = "buzz";
 
-	char thr-ive = "fizzbuzz";
+	char thrive = "fizzbuzz";
 
-	for (n = 1; n <=100; n++)
+	for (n = 1; n <= 100; n++)
 
 	{
 		if (n == 100)
@@ -39,14 +39,15 @@ int main(void)
 
 		else if ((n % 3 == 0) && (n % 5 == 0))
 		{
-			_putchar(thr-ive);
+			_putchar(thrive);
 		}
 
 		else
 		{
 			_putchar(n + '0');
 		}
-		return (0);
+		_putchar('\n');
 
 	}
+	return (0);
 }

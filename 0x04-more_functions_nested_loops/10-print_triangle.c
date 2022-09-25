@@ -2,8 +2,8 @@
 
 /**
  * print_triangle - this function prints triangle, followed by a new line
- * @size: size of triangle
- * Return: a triangle of #
+ * @size: size of triangle, when less than or zero print a new line
+ * Return: a triangle of '#'s
  */
 
 void print_triangle(int size)
@@ -15,6 +15,7 @@ void print_triangle(int size)
 	int sl;
 
 	if (size <= 0)
+
 	{
 		_putchar('\n');
 	}
@@ -35,6 +36,7 @@ void print_triangle(int size)
 				_putchar('#');
 			}
 
+			_putchar('\\');
 			_putchar('\n');
 		}
 	}

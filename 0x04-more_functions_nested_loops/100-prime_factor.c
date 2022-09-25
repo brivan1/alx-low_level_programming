@@ -15,7 +15,7 @@ int main(void)
 	{
 		if (n % p == 0)
 		{
-			n / = 2;
+			n /= 2;
 			continue;
 		}
 		for (p = 3; p < n / 2; p += 2)

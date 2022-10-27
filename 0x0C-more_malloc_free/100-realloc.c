@@ -23,13 +23,13 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return(0);
 	}
-	relloc = malloc(new_size);
-	if (relloc == NULL)
+	rellos = malloc(new_size);
+	if (rellos == NULL)
 		return (0);
 	for (i = 0; i < (old_size || i < new_size); i++)
 	{
-		*(relloc + i) = clone[i];
+		*(rellos + i) = clone[i];
 	}
 	free(ptr);
-	return (relloc);
+	return (rellos);
 }

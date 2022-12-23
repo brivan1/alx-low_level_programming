@@ -6,23 +6,23 @@
  */
 int main(void)
 {
-	-putchar('_') ;
+	_putchar('_') ;
 
-	-putchar('p') ;
+	_putchar('p') ;
 
-	-putchar('u') ;
+	_putchar('u') ;
 
-	-putchar('t') ;
+	_putchar('t') ;
 
-	-putchar('c') ;
+	_putchar('c') ;
 
-	-putchar('h') ;
+	_putchar('h') ;
 
-	-putchar('a') ;
+	_putchar('a') ;
 
-	-putchar('r') ;
+	_putchar('r') ;
 	
-	-putchar('\n') ;
+	_putchar('\n') ;
 
 	return (0) ;
 }

@@ -1,53 +1,52 @@
 #include "hash_tables.h"
-#include <string.h>
 
 /**
- * hash_table_set - Add or update an element in a hash table
- * @ht: Hash table to add or update the key/value to
- * @key: Key to add (must not be an empty string)
- * @value: Value of the key (must be duplicated)
+ * hash_table_set - a function that adds element to the hash table
+ * @ht: hash table
+ * @key: key hash table
+ * @value: value key
  *
- * Return: 1 if it succeeded, 0 otherwise
+ * Return: 1 succeeded, 0 fail
  */
-
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int index;
-	hash_node_t *new_node, *current_node;
+	hash_node_t *new;
+	char *value_copy;
+	unsigned long int index, i;
 
-	if (ht == NULL || key == NULL || *key == '\0')
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
+		return (0);
+
+	value_copy = strdup(value);
+	if (value_copy == NULL)
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
-	current_node = ht->array[index];
-	while (current_node)
+	for (i = index; ht->array[i]; i++)
 	{
-		if (strcmp(current_node->key, key) == 0)
+		if (strcmp(ht->array[i]->key, key) == 0)
 		{
-			free(current_node->value);
-			current_node->value = strdup(value);
-			if (current_node->value == NULL)
-				return (0);
+			free(ht->array[i]->value);
+			ht->array[i]->value = value_copy;
 			return (1);
 		}
-		current_node = current_node->next;
 	}
-	new_node = malloc(sizeof(hash_node_t));
-	if (new_node == NULL)
-		return (0);
-	new_node->key = strdup(key);
-	if (new_node->key == NULL)
+
+	new = malloc(sizeof(hash_node_t));
+	if (new == NULL)
 	{
-		free(new_node);
+		free(value_copy);
 		return (0);
 	}
-	new_node->value = strdup(value);
-	if (new_node->value == NULL)
+	new->key = strdup(key);
+	if (new->key == NULL)
 	{
-		free(new_node->key);
-		free(new_node);
+		free(new);
 		return (0);
 	}
-	new_node->next = ht->array[index];
-	ht->array[index] = new_node;
+	new->value = value_copy;
+	new->next = ht->array[index];
+	ht->array[index] = new;
+
 	return (1);
+}

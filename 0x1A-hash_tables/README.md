@@ -1,10 +1,10 @@
 Read or watch:
 
-What is a HashTable Data Structure - Introduction to Hash Tables , Part 0
-Hash function
-Hash table
-All about hash tables
-why hash tables and not arrays
+[What is a HashTable Data Structure - Introduction to Hash Tables , Part 0](https://www.youtube.com/watch?v=MfhjkfocRR0)
+[Hash function](https://en.wikipedia.org/wiki/Hash_function)
+[Hash table](https://en.wikipedia.org/wiki/Hash_table)
+[All about hash tables](https://www.digitalocean.com/community/tutorials/hash-table-in-c-plus-plus)
+[why hash tables and not arrays](https://stackoverflow.com/questions/31930046/what-is-a-hash-table-and-how-do-you-make-it-in-c)
 Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
@@ -138,7 +138,7 @@ mandatory
 Write a hash function implementing the djb2 algorithm.
 
 Prototype: unsigned long int hash_djb2(const unsigned char *str);
-You are allowed to copy and paste the function from this page
+You are allowed to copy and paste the function from [this page](https://gist.github.com/papamuziko/7bb52dfbb859fdffc4bd0f95b76f71e8)
 julien@ubuntu:~/0x1A. Hash tables$ cat 1-djb2.c 
 unsigned long int hash_djb2(const unsigned char *str)
 {

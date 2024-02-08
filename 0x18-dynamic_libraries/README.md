@@ -1,3 +1,8 @@
+Read or watch:
+
+[What is difference between Dynamic and Static library (Static and Dynamic linking)](https://www.youtube.com/watch?v=eW5he5uFBNM)
+[create dynamic libraries on Linux]()
+
 Create the dynamic library libdynamic.so containing all the functions listed below:
 
 int _putchar(char c);
